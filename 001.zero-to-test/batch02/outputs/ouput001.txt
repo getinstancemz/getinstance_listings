@@ -1,0 +1,22 @@
+PHPUnit 9.5.23 #StandWithUkraine
+
+EE                                                                  2 / 2 (100%)
+
+Time: 00:00.014, Memory: 4.00 MB
+
+There were 2 errors:
+
+1) thehouse\tests\RoomTest::testGetters
+Undefined property: thehouse\world\Room::$description
+
+/home/devpad/devpad-code/unbundled/0001.zero-to-test/batch02/code/tests/RoomTest.php:23
+
+2) thehouse\tests\RoomTest::testToString
+Undefined property: thehouse\world\Room::$description
+
+/home/devpad/devpad-code/unbundled/0001.zero-to-test/batch02/code/src/world/Room.php:12
+/home/devpad/devpad-code/unbundled/0001.zero-to-test/batch02/code/tests/RoomTest.php:28
+
+ERRORS!
+Tests: 2, Assertions: 1, Errors: 2.
+
