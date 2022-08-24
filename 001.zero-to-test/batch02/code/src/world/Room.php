@@ -1,5 +1,6 @@
 <?php declare(strict_types=1);
 
+/* listing 001.10 */
 namespace thehouse\world;
 
 class Room 

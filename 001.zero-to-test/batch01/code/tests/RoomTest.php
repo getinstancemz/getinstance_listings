@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-
+/* listing 001.07 */
 namespace thehouse\tests;
 
 use thehouse\world\Room;
@@ -17,7 +17,9 @@ final class RoomTest extends TestCase
         $this->assertTrue($room->name == $name);
         $this->assertEquals($desc, $room->description);
     }
+/* /listing 001.07 */
 
+/* listing 001.08 */
     public function testToString(): void
     {
         $name = "Main bedroom";
@@ -25,4 +27,6 @@ final class RoomTest extends TestCase
         $room = new Room($name, $desc);
         $this->assertEquals("$name: $desc", "{$room}");
     }
+/* /listing 001.08 */
+/* listing 001.07 */
 }

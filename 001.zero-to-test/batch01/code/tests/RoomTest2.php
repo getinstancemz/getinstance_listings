@@ -7,6 +7,7 @@ namespace thehouse\tests;
 use thehouse\world\Room;
 use PHPUnit\Framework\TestCase;
 
+/* listing 001.09 */
 final class RoomTest2 extends TestCase
 {
     private string $desc;
