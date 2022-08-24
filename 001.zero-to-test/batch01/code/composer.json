@@ -1,5 +1,5 @@
 {
-    "_comment": "listing 001.06 chop jsonwrap",
+    "_comment": "listing 001.00.01 chop jsonwrap",
     "_comment": "listing 001.04 chop jsonwrap",
     "autoload": {
         "psr-4": {
@@ -10,5 +10,5 @@
     "require-dev": {
         "phpunit/phpunit": "9.5.23"
     },
-    "_comment": "/listing 001.06"
+    "_comment": "/listing 001.00.01"
 }
