@@ -22,7 +22,9 @@ class Room
 return;
 
 /* listing 001.02   */
-$room = new Room("Coal cellar", "Very dark and dirty");
+$name = "Main bedroom";
+$desc = "An old-fashioned darkly-paneled bedroom with a four-poster bed";
+$room = new Room($name, $desc);
 print $room->name . "\n";
 print $room->description . "\n";
 /* /listing 001.02   */
