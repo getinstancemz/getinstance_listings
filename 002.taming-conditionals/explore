@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SCRIPTPATH=`dirname $(readlink -f $0)`
+$SCRIPTPATH/run /bin/bash
+
+# IMGNAME=`basename $SCRIPTPATH`.b1
+# 
+# cd batch01
+# 
+# # build the image
+# sudo docker build -t $IMGNAME .
+# 
+# # create / run the container then hang around
+# sudo docker run -it --rm --name running-$IMGNAME $IMGNAME /bin/bash
