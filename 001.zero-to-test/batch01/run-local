@@ -1,8 +1,16 @@
-if [ $# -lt 1 ]; then
-    echo "run-script <script>"
-fi
-script=$1
-shortscript=$(echo "$script" | cut -f 1 -d '.')
-# https://hub.docker.com/_/python 
-docker run -it --rm --name $shortscript -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 python $script
+#!/bin/bash
 
+#if [ $# -lt 1 ]; then
+#    echo "run-script <script>"
+#fi
+
+SCRIPTPATH=`dirname $(readlink -f $0)`
+IMGNAME=`basename $SCRIPTPATH`.b1
+
+cd $SCRIPTPATH/code
+
+
+#script=$1
+#shortscript=$(echo "$script" | cut -f 1 -d '.')
+# https://hub.docker.com/_/python 
+docker run -it --rm --name $IMGNAME -v "$PWD":/usr/src/myapp -w /usr/src/myapp composer "./scripts/Runner.sh"
