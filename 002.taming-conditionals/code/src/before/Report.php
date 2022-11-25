@@ -2,23 +2,22 @@
 
 namespace gi\lazy\conditionals\before;
 
-
+/* listing 002.12 */
 class Report {
-
-    public const TO_STDOUT=1;
-    public const TO_FILE=2;
-    private $report = "";
+    private string $report = "";
     
     public function __construct(private ?string $path=null) {
-        /*
-        if (! in_array($this->output, [self::TO_STDOUT, self::TO_FILE])) {
-            throw new \Exception("Unknown ouput rule: {$this->output})");
-        }
-        */
+    }
+    
+    // ...
 
-        $this->report = "pants";
+/* /listing 002.12 */
+    public function add(string $in)
+    {
+        $this->report .= $in;
     }
 
+/* listing 002.12 */
 
     public function output() {
         if (is_null($this->path)) {
@@ -27,4 +26,5 @@ class Report {
             file_put_contents($this->path, $this->report);
         }
     }
+
 }

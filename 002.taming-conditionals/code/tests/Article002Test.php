@@ -26,6 +26,16 @@ use gi\lazy\conditionals\after\WorldUserBilling;
 
 // replace with strategy
 use gi\lazy\conditionals\before\Report;
+use gi\lazy\conditionals\after\Report as Report2;
+use gi\lazy\conditionals\after\StdOutput;
+use gi\lazy\conditionals\after\FileOutput;
+
+// replace conditionals with guard clauses
+use gi\lazy\conditionals\before\Render;
+use gi\lazy\conditionals\after\Render as Render2;
+use gi\lazy\conditionals\common\Room;
+
+
 
 use PHPUnit\Framework\TestCase;
 
@@ -123,15 +133,67 @@ final class Article002Test extends TestCase
 
     }
 
-    public function testReport(): void
-    {
-        $report2 = new Report();
-
+    public function capture(callable $call) {
         ob_start();
-        $report2->output();
+        $call();
         $output = ob_get_contents();
         ob_end_clean();
+        return $output;
+    }
+
+    public function testReport(): void
+    {
+        $report1 = new Report();
+        $report1->add("pants");
+
+        $output = $this->capture(function() use($report1) { 
+            $report1->output();
+        });
 
         self::assertEquals("pants", $output);
+
+        $stdout = new StdOutput();
+        $report2 = new Report2($stdout);
+        $report2->add("hats");
+        $output2 = $this->capture(function() use($report2) { 
+            $report2->output();
+        });
+        self::assertEquals("hats", $output2);
+
+        $path = "/tmp/report".getmypid();
+        $fileout = new FileOutput($path);
+        $report3 = new Report2($fileout);
+        $report3->add("knees");
+        $report3->output();
+        self::assertEquals("knees", file_get_contents($path));
+
+    }
+
+    public function testRenderRoom(): void
+    {
+        $render = new Render();
+        $this->doRenderRoom($render);
+
+        $render2 = new Render2();
+        $this->doRenderRoom($render2);
+    }
+
+    public function doRenderRoom(Render|Render2 $render): void
+    {
+        $room = new Room();
+        self::assertTrue(true);
+        self::assertMatchesRegularExpression("/exit in the north/", $render->renderRoom($room));
+
+        $room = new Room();
+        $room->dark = true;
+        self::assertMatchesRegularExpression("/dark/", $render->renderRoom($room));
+
+        $room = new Room();
+        $room->flooded = true;
+        self::assertMatchesRegularExpression("/water/", $render->renderRoom($room));
+
+        $room = new Room();
+        $room->enchanted = true;
+        self::assertMatchesRegularExpression("/illusion/", $render->renderRoom($room));
     }
 }
