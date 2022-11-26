@@ -5,6 +5,4 @@ IMGNAME=`basename $SCRIPTPATH`.b1
 
 cd $SCRIPTPATH
 
-# build the image
-sudo docker build -t $IMGNAME .
-sudo docker run -it --rm --name running-$IMGNAME $IMGNAME $1
+docker run -it --rm --name $IMGNAME -v "$PWD":/usr/src/myapp -w /usr/src/myapp composer "./scripts/Runner.sh"

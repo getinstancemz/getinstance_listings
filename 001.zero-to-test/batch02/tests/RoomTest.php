@@ -20,12 +20,16 @@ final class RoomTest extends TestCase
     public function testGetters(): void
     {
         $this->assertEquals($this->name, $this->room->name, "Name is incorrect");
-        $this->assertEquals($this->desc, $this->room->description, "Description is incorrect");
+
+        // uncomment below to make the test fail as in listing 001.14
+        // $this->assertEquals($this->desc, $this->room->description, "Description is incorrect");
     }
 
     public function testToString(): void
     {
-        $this->assertEquals("{$this->name}: {$this->desc}", "{$this->room}", "__toString() value is incorrect");
+        // uncomment below to make the test fail as in listing 001.14
+        // $this->assertEquals("{$this->name}: {$this->desc}", "{$this->room}", "__toString() value is incorrect");
+        $this->assertTrue(true);
     }
 }
 
