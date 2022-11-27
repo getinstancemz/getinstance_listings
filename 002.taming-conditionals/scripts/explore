@@ -1,8 +1,0 @@
-#!/bin/bash
-
-SCRIPTPATH=`dirname $(readlink -f $0)`
-IMGNAME=`basename $SCRIPTPATH`.b1
-
-cd $SCRIPTPATH/..
-
-docker run -it --rm --name $IMGNAME -v "$PWD":/usr/src/myapp -w /usr/src/myapp composer /bin/bash
