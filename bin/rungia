@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SCRIPTPATH=`dirname $(readlink -f $0)`
+IMGNAME=`basename $PWD`.b1
+CMD="./scripts/Runner.sh"
+if [ $# -gt 0 ]; then
+    CMD=$*;
+fi
+
+#cd $SCRIPTPATH/..
+
+docker run -it --rm --name $IMGNAME -v "$PWD":/usr/src/myapp -w /usr/src/myapp composer $CMD
+

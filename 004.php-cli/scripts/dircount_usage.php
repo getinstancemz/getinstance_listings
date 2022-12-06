@@ -1,7 +1,7 @@
 #!/usr/local/bin/php
 <?php
 
-/* listing 004.01.02 */
+/* listing 004.08 */
 function usage(?string $msg=null): string
 {
     $argv = $GLOBALS['argv']; 
@@ -16,6 +16,6 @@ function usage(?string $msg=null): string
     }
     return $usage;
 }
-/* /listing 004.01.02 */
+/* /listing 004.08 */
 
 print usage();

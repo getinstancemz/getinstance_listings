@@ -1,0 +1,3 @@
+# listing 003.01 
+Warning: Undefined array key "phone" in /usr/src/myapp/src/Examples.php on line 13
+# /listing 003.01 

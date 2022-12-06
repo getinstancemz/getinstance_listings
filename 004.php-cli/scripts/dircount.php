@@ -1,7 +1,7 @@
 #!/usr/local/bin/php
 <?php
 
-/* listing 004.01 */
+/* listing 004.06 */
 function usage(?string $msg=null): string
 {
     $argv = $GLOBALS['argv']; 
@@ -16,17 +16,17 @@ function usage(?string $msg=null): string
     }
     return $usage;
 }
-/* /listing 004.01 */
+/* /listing 004.06 */
 
-/* listing 004.01.03 */
+/* listing 004.09 */
 function errorUsage(string $msg): void
 {
     fputs(STDERR, usage($msg)); 
     exit(1);
 }
-/* /listing 004.01.03 */
+/* /listing 004.09 */
 
-/* listing 004.02 */
+/* listing 004.10 */
 $options = getopt("hap:", [], $rest_index);
 $myargs = array_slice($argv, $rest_index);
 
@@ -36,9 +36,9 @@ if (isset($options['h'])) {
 }
 $pattern = (isset($options['p']))?preg_quote($options['p'], "/"):null;
 $countall = (isset($options['a']))?true:false;
-/* /listing 004.02 */
+/* /listing 004.10 */
 
-/* listing 004.03 */
+/* listing 004.14 */
 // basic argument checks
 if (count($myargs) < 1) {
     errorUsage("too few arguments");
@@ -51,9 +51,9 @@ $dir = $myargs[0];
 if (! is_dir($dir)) {
     errorUsage("'{$dir}' is not a directory");
 }
-/* /listing 004.03 */
+/* /listing 004.14 */
 
-/* listing 004.04 */
+/* listing 004.15 */
 $di = new DirectoryIterator($dir);
 $count = 0;
 foreach ($di as $fileinfo) {
@@ -77,4 +77,4 @@ if (! empty($pattern)) {
 }
 print "\n";
 
-/* /listing 004.04 */
+/* /listing 004.15 */
