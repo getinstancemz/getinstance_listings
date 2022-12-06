@@ -1,0 +1,27 @@
+# listing 004.01.01
+usage: scripts/dircount.php <directory>
+    -h        this help message
+    -a        count all files including hidden
+    -p <pat>  apply regexp pattern
+
+# /listing 004.01.01
+
+# listing 004.02.2
+Array
+(
+    [0] => scripts/dircount
+    [1] => -a
+    [2] => -p
+    [3] => ssss
+    [4] => /usr/local
+)
+# /listing 004.02.2
+
+# listing 004.02.3
+Array
+(
+    [a] => 
+    [p] => ssss
+)
+# /listing 004.02.3
+
