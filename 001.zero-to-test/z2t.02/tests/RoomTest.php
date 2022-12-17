@@ -1,7 +1,10 @@
-<?php declare(strict_types=1);
-namespace thehouse\tests;
-use thehouse\world\Room;
+<?php
 
+declare(strict_types=1);
+
+namespace thehouse\tests;
+
+use thehouse\world\Room;
 use PHPUnit\Framework\TestCase;
 
 final class RoomTest extends TestCase
@@ -32,4 +35,3 @@ final class RoomTest extends TestCase
         $this->assertTrue(true);
     }
 }
-

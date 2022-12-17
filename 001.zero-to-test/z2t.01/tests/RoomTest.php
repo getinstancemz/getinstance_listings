@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 /* listing 001.08  */
 namespace thehouse\tests;
 
