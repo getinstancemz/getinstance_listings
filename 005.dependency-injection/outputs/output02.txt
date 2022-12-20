@@ -1,0 +1,8 @@
+# listing 005.16
+object(gi\lazy\phpdi\batch04\BusinessResults)#152 (2) {
+  ["title":"gi\lazy\phpdi\batch04\BusinessResults":private]=>
+  string(5) "hats!"
+  ["listings":"gi\lazy\phpdi\batch04\BusinessResults":private]=>
+  object(gi\lazy\phpdi\batch01\ListingSet)#155 (0) {
+  }
+}

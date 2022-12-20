@@ -1,0 +1,11 @@
+# listing 005.10
+DI\Definition\Exception\InvalidDefinition: Entry "gi\lazy\phpdi\batch04\BusinessResults" cannot be resolved: Parameter $title of __construct() has no value defined or guessable
+Full definition:
+Object (
+    class = gi\lazy\phpdi\batch04\BusinessResults
+    lazy = false
+    __construct(
+        $title = #UNDEFINED#
+        $listings = get(gi\lazy\phpdi\batch01\ListingSet)
+    )
+)

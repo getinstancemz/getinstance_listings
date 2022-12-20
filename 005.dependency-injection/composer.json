@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "gi\\lazy\\phpdi\\": "src/"
+        }
+    },
+    "_comment": "listing 005.05 chop jsonwrap",
+    "require": {
+        "php-di/php-di": "^6.4"
+    },
+    "_comment": "/listing 005.05",
+    "require-dev": {
+        "phpunit/phpunit": "9.5.23"
+    }
+}
