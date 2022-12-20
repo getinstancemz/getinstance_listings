@@ -25,7 +25,8 @@ class BatchRunner
         }
         return $this->container;
     }
-    public function run2()
+
+    public function run2(): array
     {
 /* listing 005.06 */
         $container = new \DI\Container();
@@ -38,7 +39,7 @@ class BatchRunner
         return [$bres, $bres->getListings()];
     }
 
-    public function run3()
+    public function run3(): bool
     {
 /* listing 005.07 */
         $container = new \DI\Container();
@@ -47,10 +48,9 @@ class BatchRunner
         }
         return false;
 /* /listing 005.07 */
-        return $bres->getListings();
     }
 
-    public function run4()
+    public function run4(): array
     {
 /* listing 005.08 */
         $container = new \DI\Container();
@@ -62,5 +62,4 @@ class BatchRunner
 /* /listing 005.08 */
         return [$bres, $bres->getListings()];
     }
-
 }

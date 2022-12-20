@@ -11,7 +11,7 @@ class BusinessResults
 {
     private ListingSet $listings;
 /* /listing 005.03 */
-    public static int $instno=0;
+    public static int $instno = 0;
 /* listing 005.03 */
 
     public function __construct(ListingSet $listings)
@@ -23,7 +23,7 @@ class BusinessResults
     }
 
 /* /listing 005.03 */
-    public function getListings()
+    public function getListings(): ListingSet
     {
         return $this->listings;
     }

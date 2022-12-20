@@ -18,7 +18,7 @@ class BusinessResults
     }
 
 /* /listing 005.02 */
-    public function getListings()
+    public function getListings(): ListingSet
     {
         return $this->listings;
     }

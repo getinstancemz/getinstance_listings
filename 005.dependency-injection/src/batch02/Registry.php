@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace gi\lazy\phpdi\batch02;
+
 use gi\lazy\phpdi\batch01\ListingSet;
 
 class Registry
@@ -21,7 +22,8 @@ class Registry
         return self::$inst;
     }
 
-    public function getListings(): ListingSet {
+    public function getListings(): ListingSet
+    {
         return new ListingSet();
     }
 }

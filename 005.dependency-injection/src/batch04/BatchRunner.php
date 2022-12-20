@@ -9,13 +9,13 @@ use Psr\Container\ContainerInterface;
 
 class BatchRunner
 {
-    public function run1()
+    public function run1(): void
     {
         $container = new \DI\Container();
         $container->get(BusinessResults::class);
     }
 
-    public function run2()
+    public function run2(): BusinessResults
     {
 
 /* listing 005.11 */
@@ -23,11 +23,11 @@ class BatchRunner
         $builder->addDefinitions(
             [
                 // ...
-/* /listing 005.11 */
+            /* /listing 005.11 */
                 "results.title" => \DI\value("hats!"),
                 BusinessResults::class => \DI\autowire(BusinessResults::class)
                     ->constructorParameter("title", "results.title")
-/* listing 005.11 */
+            /* listing 005.11 */
             ]
         );
         $container = $builder->build();
@@ -35,7 +35,7 @@ class BatchRunner
         return $container->get(BusinessResults::class);
     }
 
-    public function run3()
+    public function run3(): BusinessResults
     {
 /* listing 005.12 */
         $builder = new \DI\ContainerBuilder();
@@ -47,7 +47,7 @@ class BatchRunner
         return $container->get(BusinessResults::class);
     }
 
-    public function run4()
+    public function run4(): string
     {
 /* listing 005.14 */
         $builder = new \DI\ContainerBuilder();
@@ -62,7 +62,7 @@ class BatchRunner
         return $container->get("results.title");
     }
 
-    public function run5()
+    public function run5(): BusinessResults
     {
 
         $builder = new \DI\ContainerBuilder();
@@ -82,7 +82,7 @@ class BatchRunner
         return $bizres;
     }
 
-    public function run6()
+    public function run6(): BusinessResults
     {
 
 /* listing 005.15 */
@@ -102,7 +102,7 @@ class BatchRunner
         return $bizres;
     }
 
-    public function run7()
+    public function run7(): BusinessResults
     {
 
         $builder = new \DI\ContainerBuilder();
@@ -125,7 +125,4 @@ class BatchRunner
 
         return $bizres;
     }
-
-
-
 }
