@@ -1,19 +1,22 @@
 <?php
+
 /* listing 006.11 */
 namespace getinstance\myapp\controllers;
+
 use getinstance\myapp\util\Conf;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Views\PhpRenderer;
 
-abstract class Controller 
+abstract class Controller
 {
-    public function __construct(private Conf $conf) {
+    public function __construct(private Conf $conf)
+    {
     }
 
-    function render(Response $response, string $template, array $args)
+    protected function render(Response $response, string $template, array $args): Response
     {
-        $renderer = new PhpRenderer(__DIR__.'/../../views/');
+        $renderer = new PhpRenderer(__DIR__ . '/../../views/');
         $renderer->render($response, $template, $args);
         return $response;
     }
