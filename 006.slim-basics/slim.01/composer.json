@@ -1,0 +1,13 @@
+{
+    "_comment": "listing 006.01    chop jsonwrap",
+    "require": {
+        "slim/slim": "^4.11",
+        "slim/psr7": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "getinstance\\myapp\\": "src/"
+        }
+    },
+    "_comment": "/listing 006.01"
+}
