@@ -1,3 +1,3 @@
-<!-- listing 006.00.01 -->
+<!-- listing 006.01 -->
 <?php
 print "hello world";

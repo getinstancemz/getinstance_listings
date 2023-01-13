@@ -13,12 +13,12 @@ class MainController extends Controller
         return $this->render($response, "main.php", $args);
     }
 
-/* listing 006.16 */
+/* listing 006.23 */
     public function processForm(Request $request, Response $response, array $args): Response
     {
         $params = (array)$request->getParsedBody();
         $args['msg'] = $params['msg'];
         return $this->render($response, "process.php", $args);
     }
-/* /listing 006.16 */
+/* /listing 006.23 */
 }

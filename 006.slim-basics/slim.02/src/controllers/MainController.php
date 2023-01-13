@@ -1,6 +1,6 @@
 <?php
 
-/* listing 006.06 */
+/* listing 006.10 */
 namespace getinstance\myapp\controllers;
 
 use Psr\Http\Message\ResponseInterface as Response;

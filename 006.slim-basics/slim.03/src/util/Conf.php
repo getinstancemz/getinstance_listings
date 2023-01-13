@@ -1,6 +1,6 @@
 <?php
 
-/* listing 006.07 */
+/* listing 006.12 */
 namespace getinstance\myapp\util;
 
 class Conf

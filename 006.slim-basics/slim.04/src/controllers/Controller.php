@@ -1,6 +1,6 @@
 <?php
 
-/* listing 006.11 */
+/* listing 006.18 */
 namespace getinstance\myapp\controllers;
 
 use getinstance\myapp\util\Conf;

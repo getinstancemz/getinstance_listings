@@ -8,7 +8,7 @@ use getinstance\myapp\controllers\MainController;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-/* listing 006.09 */
+/* listing 006.15 */
 $containerBuilder = new() DI\ContainerBuilder();
 $containerBuilder->addDefinitions([
     "settings" => [

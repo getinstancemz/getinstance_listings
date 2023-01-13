@@ -6,9 +6,9 @@
   </head>
   <body>
 
-<!-- listing 006.17 -->
+<!-- listing 006.24 -->
     <h2><?= $msg ?></h2>
-<!-- /listing 006.17 -->
+<!-- /listing 006.24 -->
      
   </body>
 </html>

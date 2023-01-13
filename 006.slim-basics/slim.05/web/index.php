@@ -19,7 +19,7 @@ $containerBuilder->addDefinitions([
 $container = $containerBuilder->build();
 AppFactory::setContainer($container);
 
-/* listing 006.15 */
+/* listing 006.22 */
 $app = AppFactory::create();
 $app->addErrorMiddleware(true, true, true);
 
