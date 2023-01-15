@@ -8,7 +8,7 @@ use getinstance\myapp\controllers\MainController;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$containerBuilder = new() DI\ContainerBuilder();
+$containerBuilder = new DI\ContainerBuilder();
 $containerBuilder->addDefinitions([
     "settings" => [
         "salutation" => "welcome!"
