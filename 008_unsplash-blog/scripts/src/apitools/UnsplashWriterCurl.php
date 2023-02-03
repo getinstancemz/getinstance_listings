@@ -22,7 +22,7 @@ class UnsplashWriterCurl
     }
 
 /* listing 008.11 */
-    public function get($endpoint, array $args = []): string
+    public function get(string $endpoint, array $args = []): string
     {
         $url = $this->host . $endpoint;
 
@@ -82,7 +82,7 @@ class UnsplashWriterCurl
         return $urlparts;
     }
 
-    public function getSizedUrl($width, $sizename): string
+    public function getSizedUrl(int $width, string $sizename): string
     {
         $urlparts = $this->getUrlParts();
         $quarr = $urlparts['query_array'];
@@ -102,7 +102,7 @@ class UnsplashWriterCurl
         return $ret;
     }
 
-    public function writeImage($dir, $width, $sizename): string
+    public function writeImage(string $dir, int $width, string $sizename): string
     {
         // get remote url for image
         $url = $this->getSizedUrl($width, $sizename);

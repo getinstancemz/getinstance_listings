@@ -74,7 +74,7 @@ class UnsplashWriter
 /* /listing 008.07 */
 
 /* listing 008.06 */
-    public function writeImage($dir, $width, $sizename): string
+    public function writeImage(string $dir, int $width, string $sizename): string
     {
         // get remote url for image
         $url = $this->getSizedUrl($width, $sizename);
