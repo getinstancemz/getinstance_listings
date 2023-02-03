@@ -1,6 +1,6 @@
 <?php
 
-/* listing 008.04 */
+/* listing 008.03 */
 namespace getinstance\utils\apitools;
 
 use Unsplash\HttpClient;
@@ -18,19 +18,19 @@ class UnsplashWriter
         ]);
         $photo = $this->switchPhoto($photoid);
     }
-/* /listing 008.04 */
+/* /listing 008.03 */
 
 
         //$imageid = "HsTnjCVQ798";
-/* listing 008.05 */
+/* listing 008.04 */
     public function switchPhoto(string $imageid): Photo
     {
         $this->photo = Photo::find($imageid);
         return $this->photo;
     }
-/* /listing 008.05 */
+/* /listing 008.04 */
 
-/* listing 008.06 */
+/* listing 008.05 */
     public function getSizedUrl(int $width): string
     {
         $urlparts = $this->getUrlParts();
@@ -48,9 +48,9 @@ class UnsplashWriter
         $urlparts['query_array'] = $qs;
         return $urlparts;
     }
-/* /listing 008.06 */
+/* /listing 008.05 */
 
-/* listing 008.08 */
+/* listing 008.07 */
     public function getAttrib()
     {
         $username =  $this->photo->user['username'];
@@ -71,9 +71,9 @@ class UnsplashWriter
     {
         return $this->photo->description ?? $this->photo->id;
     }
-/* /listing 008.08 */
+/* /listing 008.07 */
 
-/* listing 008.07 */
+/* listing 008.06 */
     public function writeImage($dir, $width, $sizename): string
     {
         // get remote url for image
@@ -102,7 +102,7 @@ class UnsplashWriter
         file_put_contents("{$dir}/{$filename}", $contents);
         return $newurl;
     }
-/* /listing 008.07 */
-/* listing 008.04 */
+/* /listing 008.06 */
+/* listing 008.03 */
 }
-/* /listing 008.04 */
+/* /listing 008.03 */

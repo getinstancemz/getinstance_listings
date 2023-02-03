@@ -1,5 +1,5 @@
 {
-    "_comment": "listing 008.03 chop jsonwrap",
+    "_comment": "listing 008.02 chop jsonwrap",
     "require":  {
         "symfony/yaml": "*",
         "unsplash/unsplash": "^3.2"
@@ -9,5 +9,5 @@
             "getinstance\\utils\\": ["src/", "test"]
         }
     },
-    "_comment": "/listing 008.03"
+    "_comment": "/listing 008.02"
 }

@@ -1,6 +1,6 @@
 <?php
 
-/* listing 008.09 */
+/* listing 008.08 */
 require_once(__DIR__ . "/vendor/autoload.php");
 use getinstance\utils\apitools\UnsplashWriter;
 

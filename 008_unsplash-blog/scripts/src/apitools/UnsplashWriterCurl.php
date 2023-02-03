@@ -2,7 +2,7 @@
 
 namespace getinstance\utils\apitools;
 
-/* listing 008.12 */
+/* listing 008.11 */
 class UnsplashWriterCurl
 {
     private object $photo;
@@ -10,7 +10,7 @@ class UnsplashWriterCurl
 
     // ...
 
-/* /listing 008.12 */
+/* /listing 008.11 */
     private string $appname;
     private string $access;
 
@@ -21,7 +21,7 @@ class UnsplashWriterCurl
         $this->photo = $this->switchPhoto($photoid);
     }
 
-/* listing 008.12 */
+/* listing 008.11 */
     public function get($endpoint, array $args = []): string
     {
         $url = $this->host . $endpoint;
@@ -61,7 +61,7 @@ class UnsplashWriterCurl
 
 // ...
 
-/* /listing 008.12 */
+/* /listing 008.11 */
     public function getPhoto(): object
     {
         return $this->photo;
@@ -130,6 +130,6 @@ class UnsplashWriterCurl
         file_put_contents("{$dir}/{$filename}", $contents);
         return $newurl;
     }
-/* listing 008.12 */
+/* listing 008.11 */
 }
-/* /listing 008.12 */
+/* /listing 008.11 */
