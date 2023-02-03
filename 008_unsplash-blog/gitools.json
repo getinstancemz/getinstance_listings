@@ -1,0 +1,10 @@
+{
+    "_comment": "listing 008.11 chop jsonwrap",
+    "unsplash": {
+        "access": "xxxxxxx",
+        "secret": "yyyyyyy",
+        "callback": "http://test.com/callback",
+        "appname": "getinstance-article-app"
+    },
+    "_comment": "/listing 008.11"
+}

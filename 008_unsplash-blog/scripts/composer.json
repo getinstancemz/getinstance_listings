@@ -1,0 +1,13 @@
+{
+    "_comment": "listing 008.03 chop jsonwrap",
+    "require":  {
+        "symfony/yaml": "*",
+        "unsplash/unsplash": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "getinstance\\utils\\": ["src/", "test"]
+        }
+    },
+    "_comment": "/listing 008.03"
+}
