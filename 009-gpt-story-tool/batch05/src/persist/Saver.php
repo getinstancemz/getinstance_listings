@@ -1,6 +1,5 @@
 <?php
 
-/* listing 009.24 */
 namespace getinstance\utils\storyai\persist;
 use getinstance\utils\storyai\storymodel\PlotPoint;
 

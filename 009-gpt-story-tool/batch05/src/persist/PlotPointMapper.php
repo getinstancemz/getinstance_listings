@@ -3,7 +3,6 @@
 namespace getinstance\utils\storyai\persist;
 use getinstance\utils\storyai\storymodel\PlotPoint;
 
-/* listing 009.23 */
 class PlotPointMapper {
 
     public function __construct(private Saver $saver) {
@@ -34,7 +33,6 @@ class PlotPointMapper {
     }
     
     //...
-/* /listing 009.23 */
 
     public function findNode(PlotPoint $node, string $id): ?PlotPoint {
         if ($node->id == $id) {
@@ -69,6 +67,5 @@ class PlotPointMapper {
         }
         return $node;
     }
-/* listing 009.23 */
 }
 

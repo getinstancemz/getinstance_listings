@@ -21,6 +21,9 @@ class PlotPoint {
         $ret = [];
         $array = preg_split("/^\d[\)\.]\s*/m", $str, -1, \PREG_SPLIT_NO_EMPTY);
         foreach ($array as $point) {
+            if (empty($point)) {
+                continue;
+            }
             $ret[] = new self(null, trim($point));
         }
         return $ret;
@@ -44,12 +47,42 @@ class PlotPoint {
 		return $child;
     }
 
+    public function removeChild(PlotPoint $candidate): bool
+    {
+        $match = false;
+        $newchildren = [];
+        foreach ($this->children as $child) {
+            if ($child->id != $candidate->id) {
+                array_push($newchildren, $child);
+            } else {
+                $match = true;
+            }
+        }
+        $this->children = $newchildren ;
+        return $match;
+    }
+
     public function getChildren(): array {
         return $this->children;
     }
 
     public function accept(PlotPointVisitor $visitor): void {
         $visitor->visit($this);
+    }
+
+    public function storySoFarStr(): string {
+        $starr = $this->storySoFar();
+        return implode(". ", $starr);
+    }
+
+    public function getCurrentAndParents(): array {
+        $points = [];
+        $node = $this;
+        while (! is_null($node)) {
+            $points[] = $node;
+            $node = $node->getParent();
+        }
+        return array_reverse($points);
     }
 
     public function storySoFar(): array {
@@ -61,7 +94,7 @@ class PlotPoint {
         }
         return array_reverse($points);
     }
-
+    
     public function __toString(): string
     {
         return $this->point;

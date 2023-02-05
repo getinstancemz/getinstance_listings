@@ -1,7 +1,6 @@
 <?php
 namespace getinstance\utils\storyai\storymodel;
 
-/* listing 009.22 */
 class Story
 {
     private PlotPoint $premise;
@@ -20,12 +19,9 @@ class Story
         $this->currentnode = $this->premise;
     }
 
-    // ...
-/* /listing 009.22 */
-
     public function constructQuery() {
         $str = "This is a {$this->genre} story.\n\n";
-        $str .= "{$this->premise}.\n\n";
+        $str .= $this->currentnode->storySoFarStr()."\n\n";
         $str .= "Provide three alternative plot points, each one describing a single ";
         $str .= "different event that follows immediately after this setup.\n\nFor example:\n\n";
         $str .= "1) Harry and Mark find the rabbit hiding in the pantry and resolve to eat it.\n";
@@ -34,7 +30,6 @@ class Story
         return $str; 
     }
 
-/* listing 009.25 */
     public function setCurrentNode(string $id) {
         $node = $this->findNode($id);
         if (is_null($node)) {
@@ -44,18 +39,30 @@ class Story
         return $node;
     }
 
+    public function deleteNode(string $id) {
+        if ($id == $this->premise->id) {
+            throw new \Exception("can't delete root premise");
+        }
+        $candidate = $this->findNode($id);
+        if (is_null($candidate)) {
+            throw new \Exception("can't find id '{$id}'");
+        }
+        if ($candidate->id == $this->currentnode->id) {
+            $this->setCurrentNode($candidate->getParent()->id);
+        }
+        $candidate->getParent()->removeChild($candidate);
+    }
+
     public function getCurrentNode(): PlotPoint 
     {
         return $this->currentnode;
     }
-/* /listing 009.25 */
 
     public function getPremise(): PlotPoint
     {
         return $this->premise;
     }
 
-/* listing 009.22 */
     public function findNode(string $id, ?PlotPoint $node=null): ?PlotPoint {
         if (is_null($node)) {
             $node=$this->premise;
