@@ -14,6 +14,12 @@ class Saver {
         $this->path = "$datadir/$storydir";
     }
 
-    public function save($name, $json) {
-        file_put_contents("$this->path/nodes.json", $ie->export($topnode));
+    public function save($name, $json): bool {
+        file_put_contents("$this->path/{$name}.json", $json);
+        return true;
     }
+
+    public function load($name): string {
+        return file_get_contents("$this->path/{$name}.json");
+    }
+}

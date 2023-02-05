@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 use getinstance\utils\storyai\storymodel\Story;
 use getinstance\utils\storyai\storymodel\PlotPoint;
 use getinstance\utils\storyai\persist\PlotPointMapper;
+use getinstance\utils\storyai\persist\Saver;
 use getinstance\utils\storyai\control\Runner;
 
 final class StoryTest extends TestCase
@@ -61,7 +62,7 @@ final class StoryTest extends TestCase
     public function testSaveLoad(): void
     {
         $root = $this->buildNodeTree();
-        $sl = new PlotPointMapper();
+        $sl = new PlotPointMapper(new Saver("/tmp/", "mystory"));
         $json = $sl->export($root);
         $newroot = $sl->import($json);
         
