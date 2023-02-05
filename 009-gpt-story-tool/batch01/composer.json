@@ -1,0 +1,12 @@
+{
+    "_comment": "listing 009.02 chop jsonwrap",
+    "autoload": {
+        "psr-4": {
+            "getinstance\\utils\\storyai\\": ["src/", "test"]
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "_comment": "/listing 009.02"
+}
