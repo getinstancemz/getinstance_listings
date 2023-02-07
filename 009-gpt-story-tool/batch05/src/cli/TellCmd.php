@@ -14,7 +14,7 @@ class TellCmd extends CliCmd
 
         $runner = $this->getRunner();
         $story = $runner->resume($storyname);
-        $items = $story->getCurrentNode()->getParents();
+        $items = $story->getCurrentNode()->getCurrentAndParents();
         print "\n";
         foreach ($items as $item) {
             print "{$item->id}   $item\n";

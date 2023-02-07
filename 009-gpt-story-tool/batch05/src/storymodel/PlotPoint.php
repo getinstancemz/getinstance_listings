@@ -21,7 +21,7 @@ class PlotPoint {
         $ret = [];
         $array = preg_split("/^\d[\)\.]\s*/m", $str, -1, \PREG_SPLIT_NO_EMPTY);
         foreach ($array as $point) {
-            if (empty($point)) {
+            if (preg_match("/^\s*$/", $point)) {
                 continue;
             }
             $ret[] = new self(null, trim($point));
