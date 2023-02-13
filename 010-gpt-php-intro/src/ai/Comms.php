@@ -1,4 +1,5 @@
 <?php
+
 /* listing 010.04 */
 namespace getinstance\utils\aibasic\ai;
 
@@ -13,17 +14,6 @@ class Comms
         $this->secretKey = $secretKey;
     }
 
-/* /listing 010.04 */
-
-    public function sendQuery_fake($prompt)
-    {
-        $fake  = "1) " . uniqid() . "\n";
-        $fake .= "2) " . uniqid() . "\n";
-        $fake .= "3) " . uniqid() . "\n";
-        return $fake;
-    }
-
-/* listing 010.04 */
     public function sendQuery(string $prompt): string
     {
         $open_ai = new OpenAi($this->secretKey);
@@ -40,7 +30,7 @@ class Comms
             throw new \Exception($ret['error']['message']);
         }
         if (! isset($ret['choices'][0]['text'])) {
-            throw new \Exception("Unknown error: ".$completion);
+            throw new \Exception("Unknown error: " . $completion);
         }
         return $ret['choices'][0]['text'];
     }
