@@ -24,8 +24,8 @@ class Comms {
 		$completion = $open_ai->complete([
 			'engine' => 'text-davinci-003',
 			'prompt' => $prompt,
-			//'temperature' => 0.9,
-			'temperature' => 0.5,
+			'temperature' => 0.9,
+			//'temperature' => 0.5,
 			'max_tokens' => 400,
 			'frequency_penalty' => 0,
 			'presence_penalty' => 0.6,

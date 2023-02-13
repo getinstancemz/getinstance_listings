@@ -27,6 +27,7 @@ class Story
         $str .= "1) Harry and Mark find the rabbit hiding in the pantry and resolve to eat it.\n";
         $str .= "2) The rabbit is a robot controlled by an evil agency and it attempts to kill Harry and Mark with its laser eyes.\n";
         $str .= "3) Harry and Mark find the rabbit asleep on the couch and resolve to adopt it.\n";
+        //print $str;
         return $str; 
     }
 
