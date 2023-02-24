@@ -1,0 +1,14 @@
+# listing 011.03
+me: stdClass Object
+(
+    [data] => stdClass Object
+        (
+            [id] => 1f01b1cb3b51cd4f711bee23ac36ba2603ced6ae47c39873b3ab9a791e61c75ea
+            [username] => getinstance_mz
+            [name] => Matt Zandstra
+            [url] => https://medium.com/@getinstance_mz
+            [imageUrl] => https://cdn-images-1.medium.com/fit/c/400/400/1*dmbNkD5D-u45r44go_cf0g.png
+        )
+
+)
+
