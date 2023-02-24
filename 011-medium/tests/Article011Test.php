@@ -51,7 +51,7 @@ ARTICLE;
         $this->assertEquals($resp->data->title, "A test article");
     }
 
-    public function testImageRegexp(): void
+    public function toastImageRegexp(): void
     {
         $token = $this->getToken();
 /* listing 011.10 */
@@ -63,7 +63,7 @@ ARTICLE;
     }
 
 
-    public function testImagesMediumPoster(): void
+    public function toastImagesMediumPoster(): void
     {
 
         $img1 = realpath(__DIR__ . "/../res/medium1.png");
@@ -92,7 +92,7 @@ ARTICLE;
         $this->assertEquals($resp->data->title, "An imagey article");
     }
 
-    public function testMediumPoster(): void
+    public function toastMediumPoster(): void
     {
         $token = $this->getToken();
         $hellome = new MediumPoster($token);

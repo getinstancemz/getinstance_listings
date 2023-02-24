@@ -1,5 +1,4 @@
 # listing 011.12
-![alt text](blah/png)
-![alt text](blah/png "a title")
-![alt text](blah/png 'a title')
-
+![alt text](blah.png)
+![alt text](blah.png "a title")
+![alt text](blah.png 'a title')
