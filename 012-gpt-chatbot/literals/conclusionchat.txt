@@ -1,5 +1,5 @@
 # listing 012.06
-
+$ php scripts/simplebot.php 
 USER      > I have written an article on using your engine from PHP. I have covered. 
 
 ASSISTANT > That sounds great! It's always helpful to have resources that cover using OpenAI's API from different programming languages. Can you share some details about what you covered in your article about using the OpenAI API from PHP? I'd be happy to hear more about it. 
@@ -23,4 +23,3 @@ Overall, the goal of your conclusion should be to leave readers feeling informed
 USER      > Thanks. I will use your reply in my article with attribution.
 
 ASSISTANT > You're welcome! It's great to hear that my suggestions were helpful. And thank you for attributing my input in your article - I appreciate it! Let me know if there's anything else I can do to assist you. 
-
