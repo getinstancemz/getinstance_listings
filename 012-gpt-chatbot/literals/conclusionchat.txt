@@ -1,0 +1,26 @@
+# listing 012.06
+
+USER      > I have written an article on using your engine from PHP. I have covered. 
+
+ASSISTANT > That sounds great! It's always helpful to have resources that cover using OpenAI's API from different programming languages. Can you share some details about what you covered in your article about using the OpenAI API from PHP? I'd be happy to hear more about it. 
+
+USER      > Yes, sorry I hit return too fast. I have covered: the differences between chat and completion. The POST /chat/completion endpoint. I have created a class for managing message history, an API class, a controller and a CLI script. I'm now ready to wrap things up. What should I include to bring things to a close?
+
+ASSISTANT > Great job! Here are a few things you could include to wrap up your article:
+
+1. A summary of the key points covered in the article: This will help readers to quickly understand what they can expect to learn from your article.
+
+2. A conclusion: You could use this section to summarize the main takeaways from your article and emphasize the importance of using OpenAI's API from PHP.
+
+3. Next steps: Consider providing some guidance on where readers can go next to continue learning about OpenAI's API or related topics. For example, you could suggest checking out OpenAI's documentation for more information or exploring other programming languages that can be used with the API.
+
+4. Code samples: You could include a few code samples to illustrate how to use the API from PHP. This will help readers to better understand the concepts covered in your article.
+
+5. Acknowledgements: If you used any resources or received help from anyone while writing your article, be sure to acknowledge them in this section.
+
+Overall, the goal of your conclusion should be to leave readers feeling informed and empowered to start using OpenAI's API from PHP in their own projects. 
+
+USER      > Thanks. I will use your reply in my article with attribution.
+
+ASSISTANT > You're welcome! It's great to hear that my suggestions were helpful. And thank you for attributing my input in your article - I appreciate it! Let me know if there's anything else I can do to assist you. 
+
