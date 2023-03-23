@@ -6,9 +6,11 @@ use gi\lazy\conditionals\common\Account;
 use gi\lazy\conditionals\common\Offer;
 
 /* listing 002.11 */
-class WorldUserBilling extends UserBilling {
+class WorldUserBilling extends UserBilling
+{
 
-    public function __construct(Account $account) {
+    public function __construct(Account $account)
+    {
         if ($account->isEu()) {
             throw new \Exception("non-EU accounts only");
         }
@@ -37,4 +39,3 @@ class WorldUserBilling extends UserBilling {
         return $charge;
     }
 }
-

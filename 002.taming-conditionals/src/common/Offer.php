@@ -2,6 +2,7 @@
 
 namespace gi\lazy\conditionals\common;
 
-class Offer {
+class Offer
+{
 
 }

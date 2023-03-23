@@ -2,9 +2,10 @@
 
 namespace gi\lazy\conditionals\common;
 
-abstract class ShortCircuitBase {
+abstract class ShortCircuitBase
+{
 
-    public abstract function renderRoom(string $name): string;
+    abstract public function renderRoom(string $name): string;
     
     public function roomError(string $name): string
     {
@@ -16,13 +17,11 @@ abstract class ShortCircuitBase {
         return "success";
     }
 
-    public function getRoom(string $name): string|bool
+    public function getRoom(string $name): string | bool
     {
         if (in_array($name, ["living", "bed"])) {
             return $name;
         }
         return false;
     }
-    
 }
-

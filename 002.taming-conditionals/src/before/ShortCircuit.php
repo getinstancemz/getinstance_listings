@@ -4,13 +4,13 @@ namespace gi\lazy\conditionals\before;
 
 use gi\lazy\conditionals\common\ShortCircuitBase;
 
-class ShortCircuit extends ShortCircuitBase {
+class ShortCircuit extends ShortCircuitBase
+{
 
     /* listing 002.01 */
     public function renderRoom(string $name): string
     {
         if ($room = $this->getRoom($name)) {
-
             // do
             //
             // lots
@@ -19,9 +19,9 @@ class ShortCircuit extends ShortCircuitBase {
             //
     /* listing 002.02 */
             // lots
-            // 
+            //
             // of
-            // 
+            //
             // stuff
             //
 
@@ -32,5 +32,4 @@ class ShortCircuit extends ShortCircuitBase {
     /* /listing 002.02 */
     }
     /* /listing 002.01 */
-   
 }

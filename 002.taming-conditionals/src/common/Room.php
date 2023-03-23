@@ -2,27 +2,28 @@
 
 namespace gi\lazy\conditionals\common;
 
-class Room {
-    public bool $flooded=false; 
-    public bool $enchanted=false; 
-    public bool $dark=false; 
+class Room
+{
+    public bool $flooded = false;
+    public bool $enchanted = false;
+    public bool $dark = false;
 
-    function isFlooded(): bool
+    public function isFlooded(): bool
     {
-        return $this->flooded;    
+        return $this->flooded;
     }
 
-    function isTooDark(): bool
+    public function isTooDark(): bool
     {
-        return $this->dark;    
+        return $this->dark;
     }
 
-    function isEnchanted(): bool
+    public function isEnchanted(): bool
     {
-        return $this->enchanted;    
+        return $this->enchanted;
     }
 
-    function getDescription(): string
+    public function getDescription(): string
     {
         $str = <<<DESC
         A bright clean room with a skylight and a neat bunkbed.

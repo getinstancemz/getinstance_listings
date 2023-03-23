@@ -4,7 +4,8 @@ namespace gi\lazy\conditionals\after;
 
 use gi\lazy\conditionals\common\ShortCircuitBase;
 
-class ShortCircuit extends ShortCircuitBase {
+class ShortCircuit extends ShortCircuitBase
+{
 
     /* listing 002.03 */
     public function renderRoom(string $name): string
@@ -21,9 +22,9 @@ class ShortCircuit extends ShortCircuitBase {
         // and
         //
         // lots
-        // 
+        //
         // of
-        // 
+        //
         // stuff
         //
 

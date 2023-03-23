@@ -4,13 +4,13 @@ namespace gi\lazy\conditionals\before;
 
 use gi\lazy\conditionals\common\Account;
 
-class DuplicateClauses {
+class DuplicateClauses
+{
 
 /* listing 002.04 */
     public function accountInfo(Account $account): string
     {
         if ($account->isEu()) {
-            
             $report = "";
 
             // do some EU related stuff
@@ -20,11 +20,10 @@ class DuplicateClauses {
             $formatted = $expdate->format("Y-m-d");
             $report .= $formatted;
           
-            // do some more EU related stuff 
+            // do some more EU related stuff
 
             return $this->sendReport($report);
         } else {
-
             $report = "";
 
             // do some rest-of-world related stuff
@@ -34,16 +33,15 @@ class DuplicateClauses {
             $formatted = $expdate->format("Y-m-d");
             $report .= $formatted;
 
-            // do some more rest-of-world related stuff 
+            // do some more rest-of-world related stuff
 
             return $this->sendReport($report);
         }
     }
 /* /listing 002.04 */
 
-    public function sendReport(string $report) {
+    public function sendReport(string $report): string
+    {
         return $report;
     }
-   
 }
-

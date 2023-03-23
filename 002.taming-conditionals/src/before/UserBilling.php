@@ -6,7 +6,8 @@ use gi\lazy\conditionals\common\Account;
 use gi\lazy\conditionals\common\Offer;
 
 /* listing 002.08 */
-class UserBilling {
+class UserBilling
+{
     public function __construct(private Account $account)
     {
     }
@@ -19,7 +20,7 @@ class UserBilling {
         if ($this->account->isEu()) {
             // do some EU related stuff
         } else {
-            // do some more rest-of-world related stuff 
+            // do some more rest-of-world related stuff
         }
         
         return $this->sendReport($report);
@@ -47,11 +48,11 @@ class UserBilling {
     // ...
 
 /* /listing 002.08 */
-    public function sendReport(string $report) {
+    public function sendReport(string $report): string
+    {
         return $report;
     }
    
 /* listing 002.08 */
 }
 /* /listing 002.08 */
-

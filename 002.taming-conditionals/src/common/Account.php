@@ -3,27 +3,30 @@
 namespace gi\lazy\conditionals\common;
 
 /* listing 002.05 */
-class Account {
+class Account
+{
 
     // ....
 
 /* /listing 002.05 */
 
-    private bool $iseu=false;
+    private bool $iseu = false;
 
     public function setIsEu(bool $iseu): void
     {
-        $this->iseu=$iseu;
+        $this->iseu = $iseu;
     }
 
-    public function getExpiry(): string {
+    public function getExpiry(): string
+    {
         if ($this->isEu()) {
             return "2024-06-24 11:45";
         }
         return "2025-06-24 11:45";
     }
 
-    public function isEu(): bool {
+    public function isEu(): bool
+    {
         return $this->iseu;
     }
     
